@@ -1,0 +1,36 @@
+.new-tweet {
+  background-color: beige;
+  border: 1px solid #4056A1;
+  padding: 1.5em;
+}
+
+#tweet-text {
+display: flex;
+border: none;
+width: 100%;
+background-color: beige;
+border-bottom: 2px solid #4056A1;
+max-height: 1.5em;
+}
+
+#tweet-text:hover { 
+  border-bottom: 2px solid #4056A1;
+}
+
+.counter {
+display: flex;
+}
+
+.button {
+  display: flex;
+  color: beige;
+  background-color: #4056A1;
+  
+}
+
+.buttonblock {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  font-family: 'Bungee', cursive;
+}
