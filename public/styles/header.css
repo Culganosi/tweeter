@@ -1,10 +1,19 @@
-header {
+body > header {
   display: flex;
   height: 400px;
   width: 100%;
-  background-color: orangered;
-  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  background-color: #ebe170;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.user {
+  font-family: monospace;
+}
+
+.profilepic {
+  padding-top: 20%;
+  border-radius: 50%;
 }

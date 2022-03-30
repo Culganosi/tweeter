@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-  
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/a625a71c57.js" crossorigin="anonymous"></script>
 
@@ -33,26 +33,25 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav class="nav">
-      <span class="logo">zee tweetah</span>
+      <span class="logo">Tweeter!</span>
       <div class="nav-right">
-      <span class="navtext">new tweet</span>
+      <span class="navtext">Gimme sum dat tweet tweet</span>
       <i class="fa-solid fa-angles-down fa-beat-fade"></i>
     </div>
   </nav>      
-         <header class="header">
+         <header>
           <div>
-              <img src="/images/profile-hex.png"> 
+              <img src="https://www.slovenskenovice.si/media/images/20211209/1086817.edae17d1.fill-256x256.jpg" class="profilepic"> 
           </div>
           <br>
-          <div class="name">
-              <h2>Culganosi</h2>
+          <div class="user">
+              <h2>Oswald Cobblepot</h2>
               </div>
       </header>
       
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -62,6 +61,31 @@
           </div>
         </form>
       </section>
-      
+        <!-- we can consider a tweet to be an article-->
+        <div class="tweets">
+        <article class="tweet">
+        <!--Consider that the tweet article has a header and a footer.-->
+          <header>
+            <img src ="https://icon-library.com/images/avatar-icon-images/avatar-icon-images-7.jpg" alt="avatar goes here" class="avatars"> 
+            <h2 class="handle">@PENGUINS4LYFE</h2>
+            <p class="name">Oswald Cobblepot</p>
+          </header>
+          <div class="tweets-main">
+          <p class="content"> hey im new here anyone else like penguins or what </p>
+          <footer> 
+          <span class="daysAgo">5 days ago</span>
+          <span class="icons">
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+          </span>
+          </div>
+            
+          </footer>
+          </article>
+          </div>
+          </main>
   </body>
+
+  <script type="text/javascript" src="/scripts/composter-char-counter.js"></script>
 </html>

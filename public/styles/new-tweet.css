@@ -1,6 +1,5 @@
 .new-tweet {
-  background-color: beige;
-  border: 1px solid #4056A1;
+  background-color: #C0C0C0;
   padding: 1.5em;
 }
 
@@ -8,13 +7,9 @@
 display: flex;
 border: none;
 width: 100%;
-background-color: beige;
-border-bottom: 2px solid #4056A1;
+background-color: #C0C0C0;
+border-bottom: 2px solid #36454F;
 max-height: 1.5em;
-}
-
-#tweet-text:hover { 
-  border-bottom: 2px solid #4056A1;
 }
 
 .counter {
@@ -24,7 +19,7 @@ display: flex;
 .button {
   display: flex;
   color: beige;
-  background-color: #4056A1;
+  background-color: #36454F;
   
 }
 
@@ -33,4 +28,8 @@ display: flex;
   justify-content: space-between;
   padding-top: 10px;
   font-family: 'Bungee', cursive;
+}
+
+.red-text {
+  color: red;
 }
