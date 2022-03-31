@@ -5,42 +5,26 @@
  */
 // From server/data-files
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1648417613692
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1648504013692
-  }
-]
+//PREVENT XSS WITH ESCAPING 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
+//FUNCTION TO GENERATE TWEETS
 const createTweetElement = function(tweetObject) {
+  //IMPORT HTML FROM INDEX AND IMPLEMENET INTO FUNCTION USING JQUERY
   let $tweet = (`
   <article class="tweet">
     <header>
-      <img src ="${tweetObject.user.avatars}" alt="avatar goes here" class="avatars">
-      <h2 class="handle">${tweetObject.user.handle}</h2>
-      <p class="name">${tweetObject.user.name}</p>
+      <img src ="${escape(tweetObject.user.avatars)}" alt="avatar goes here" class="avatars">
+      <h2 class="handle">${escape(tweetObject.user.handle)}</h2>
+      <p class="name">${escape(tweetObject.user.name)}</p>
     </header>
     <div class="tweets-main">
-    <p class="content">${tweetObject.content.text}</p>
-    <span class="daysAgo">${tweetObject.content.created_at}</span>
+    <p class="content">${escape(tweetObject.content.text)}</p>
+    <span class="daysAgo">${timeago.format(tweetObject.created_at)}</span>
     <span class="icons">
     <i class="fas fa-flag"></i>
     <i class="fas fa-retweet"></i>
@@ -53,6 +37,7 @@ const createTweetElement = function(tweetObject) {
   return $tweet;
 };
 
+//FUNCTION TO RENDER THE GENERATED TWEETS
 const renderTweets = function(tweets) {
   // loops through tweets
   for (let tweet of tweets) {
@@ -62,16 +47,45 @@ const renderTweets = function(tweets) {
     $('#tweets-container').prepend(generatedTweet);
   }
 };
-
-
-//add an event listener that listens for the submit event
-
-//prevent the default behaviour of the submit event (data submission and page refresh)
-
-//create an AJAX POST request in client.js that sends the form data to the server.
-
+// AJAX POST && ERRORS
+let addTweet = () => {
+  $('form').on('submit', function(event) {
+    event.preventDefault();
+    //ERROR TOO MANY CHARACTERS
+    if ($("#tweet-text").val().length > 140) {
+      $('.error-message').text("Error! You must limit your tweets to 140 characters!").slideDown();
+    // ERROR NO INPUT
+    } else if ($("#tweet-text").val().length === 0) {
+      $('.error-message').text("Please input text into the field").slideDown();
+    } else {
+    $('.error-message').slideUp();
+    $.ajax({
+      type: "POST",
+      url: "/tweets",
+      data: $(this).serialize(),
+    }).then(() => {
+      loadTweets();
+  }).catch();
+   //CLEAR INPUT FIELD AFTER POSTING A TWEET
+    $('.new-tweet').find('form').trigger('reset');
+   //RESET THE CHARACTER COUNTER AFTER POSTING A TWEET
+    $('.counter').text(140);
+  };
+})
+};
+// Ajax GET
+let loadTweets = () => {
+  $.ajax({
+    type: "GET",
+    url: "/tweets",
+    data: "data"
+  }).then((data) => {
+    renderTweets(data);
+  }).catch()
+};
 
 
 $(document).ready(() => {
-  renderTweets(data);
+addTweet();
+loadTweets();
 });

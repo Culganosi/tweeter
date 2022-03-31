@@ -1,19 +1,19 @@
 .new-tweet {
   background-color: #C0C0C0;
-  padding: 1.5em;
 }
 
 #tweet-text {
-display: flex;
-border: none;
-width: 100%;
-background-color: #C0C0C0;
-border-bottom: 2px solid #36454F;
-max-height: 1.5em;
+  display: flex;
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: #C0C0C0;
+  border-bottom: 2px solid #36454F;
+  max-height: 1.5em;
 }
 
 .counter {
-display: flex;
+  display: flex;
 }
 
 .button {
@@ -32,4 +32,19 @@ display: flex;
 
 .red-text {
   color: red;
+}
+
+.error-message {
+  border: 2px solid;
+  margin: 10px 0px;
+  padding: 15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url('https://i.imgur.com/GnyDvKN.png');
+}
+
+.hide {
+  display: none;
 }

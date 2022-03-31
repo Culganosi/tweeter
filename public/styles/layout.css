@@ -41,6 +41,7 @@ body {
 
 .icons {
 float: right;
+padding-right: 15px;
 }
 
 .fa-flag:hover {
