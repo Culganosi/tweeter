@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
@@ -12,7 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -28,47 +35,47 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composter-char-counter.js"></script>
-    
+
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/a625a71c57.js" crossorigin="anonymous"></script>
 
-  </head>
+</head>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
+<body>
     <nav class="nav">
-      <span class="logo">Tweeter!</span>
-      <div class="nav-right">
-      <span class="navtext">Gimme sum dat tweet tweet</span>
-      <i class="fa-solid fa-angles-down fa-beat-fade"></i>
-    </div>
-  </nav>      
-         <header class="tweeterheader">
-          <div>
-              <img src="https://www.slovenskenovice.si/media/images/20211209/1086817.edae17d1.fill-256x256.jpg" class="profilepic"> 
-          </div>
-          <br>
-          <div class="user">
-              <h2>Oswald Cobblepot</h2>
-              </div>
-      </header>
-      
+        <span class="logo">Tweeter!</span>
+        <div class="nav-right">
+            <span class="navtext">tweet tweet</span>
+            <i class="fa-solid fa-angles-down fa-beat-fade"></i>
+        </div>
+    </nav>
+    <header class="tweeterheader">
+        <div>
+            <img src="https://www.slovenskenovice.si/media/images/20211209/1086817.edae17d1.fill-256x256.jpg" class="profilepic">
+        </div>
+        <br>
+        <div class="user">
+            <h2 class>Oswald Cobblepot</h2>
+        </div>
+    </header>
+
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-        <div class="error-message hide">
-        </div>
-        <form method="POST" action="/tweets">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="buttonblock">
-            <button type="submit" class="button">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section id="tweets-container">
-      </section>
-          </main>
-  </body>
+        <section class="new-tweet">
+            <div class="error-message hide">
+            </div>
+            <form method="POST" action="/tweets">
+                <label for="tweet-text">What are you humming about?</label>
+                <textarea name="text" id="tweet-text"></textarea>
+                <div class="buttonblock">
+                    <button type="submit" class="button">Tweet</button>
+                    <output name="counter" class="counter" for="tweet-text">140</output>
+                </div>
+            </form>
+        </section>
+        <section id="tweets-container">
+        </section>
+    </main>
+</body>
+
 </html>

@@ -1,19 +1,36 @@
 .tweeterheader {
-  display: flex;
-  height: 400px;
-  width: 100%;
-  background-color: #ebe170;
-  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    height: auto;
+    width: 100%;
+    background-color: #f5cb5c;
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .user {
-  font-family: monospace;
+    font-family: monospace;
 }
 
 .profilepic {
-  padding-top: 20%;
-  border-radius: 50%;
+    padding-top: 20%;
+    border-radius: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    .tweeterheader {
+        margin-left: 50px;
+        margin-top: 100px;
+        margin-right: 125px;
+    }
+    .container {
+        margin-top: 100px;
+        margin-right: 50px;
+    }
 }

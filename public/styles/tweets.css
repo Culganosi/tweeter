@@ -1,55 +1,57 @@
 .tweets {
-border-style: solid;
-padding: 15px;
-margin: 0px 30px;
+    border-style: solid;
+    padding: 15px;
+    margin: 0px 30px;
 }
 
 .tweet {
-  position: relative;
-  align-items:center;
-  background-color: #C0C0C0;
-  border-style: solid;
-  margin: 20px 0px;
+    align-items: center;
+    background-color: #bdbbb0;
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+    border-style: solid;
+    margin: 20px 0px;
 }
 
 .tweet:hover {
-  box-shadow: 5px 10px grey;
+    box-shadow: 5px 10px grey;
 }
 
 .avatars {
-  height: 40px;
-  width: auto;
-  margin: 5px;
-  border-radius: 5px;
-  display: inline-flex;
+    height: 40px;
+    width: auto;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-flex;
 }
 
 .tweet header {
- display: flex;
- align-items: flex-start;
+    display: flex;
+    align-items: flex-start;
 }
 
 .name {
-  display: inline-flex;
-  font-size: 75%;
+    display: inline-flex;
+    font-size: 75%;
+    margin-left: auto;
+    padding-right: 10px;
 }
 
 .handle {
-  display: inline-flex;
-  position: absolute;
-  justify-content: center;
-  top: 5px;
-  right: 0;
-  padding-right: 10px;
-  font-size: 75%;
+    display: inline-flex;
+    justify-content: center;
+    right: 55px;
+    padding-right: 10px;
+    font-size: 75%;
 }
 
 .content {
-  margin-bottom: 5px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid;
+    margin-bottom: 5px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid;
+    padding-left: 5px;
 }
 
 .daysAgo {
-  font-size: 75%;
+    font-size: 75%;
+    padding-left: 5px;
 }

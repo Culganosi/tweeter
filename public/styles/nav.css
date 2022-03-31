@@ -1,32 +1,55 @@
 nav {
-  display: flex;
-  position: fixed;
-  top: 0;
-  justify-content: space-between;
-  height: 120px;
-  width: 100%;
-  background-color: #36454F;
-  color: #FFFFFF;
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    background-color: #36454F;
+    color: #FFFFFF;
+    padding: 0 5px;
 }
 
 .logo {
-  display: flex;
-  font-family: 'Bungee', cursive;
-  margin: 1.5em;
+    display: flex;
+    font-family: 'Bungee', cursive;
+    font-size: 1.25em;
+    padding: 30px;
+    align-items: center;
 }
 
 .nav-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5em;
 }
 
-
 .fa-angles-down {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  color: #ebe170;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: #ebe170;
+}
+
+@media only screen and (min-width: 768px) {
+    .nav {
+        background-color: #333533;
+        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .nav {
+        background-color: #f5cb5c;
+        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+        color: #333533;
+    }
+    .fa-angles-down {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        color: #333533;
+    }
 }

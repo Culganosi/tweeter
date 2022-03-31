@@ -3,35 +3,39 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
+
 
 /*
  * Global layout stuff
  */
 
- .container {
-  padding-top: 15px;
-  width: 90%;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #C0C0C0;
-
- }
+.container {
+    padding-top: 15px;
+    width: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #bdbbb0;
+}
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #545149;
-  background-color: #C0C0C0;
-  font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
-  margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #545149;
+    background-color: #bdbbb0;
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 5em;
 }
 
 
@@ -40,17 +44,22 @@ body {
  */
 
 .icons {
-float: right;
-padding-right: 15px;
+    float: right;
+    padding-right: 15px;
 }
 
 .fa-flag:hover {
-  color: #ebde4c
-}
-.fa-retweet:hover {
-  color: #ebde4c
+    color: #ebde4c
 }
 
-.fa-heart:hover   {
-  color: #ebde4c
+.fa-retweet:hover {
+    color: #ebde4c
+}
+
+.fa-heart:hover {
+    color: #ebde4c
+}
+
+h2 {
+    font-family: 'Merienda', cursive;
 }
